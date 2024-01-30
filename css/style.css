@@ -1,0 +1,438 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 10px 15px 10px 0px rgba(5, 5, 5, 0.8);
+    text-transform: uppercase;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: white;
+    z-index: 98;
+    width: 100%;
+    overflow: hidden;
+}
+.webname {
+    color: rgb(48, 47, 47);
+    font-size: 28px;
+}
+.nav-lists {
+    display: flex;
+    column-gap: 20px;
+}
+.nav-lists a {
+    text-decoration: none;
+    color: rgb(48, 47, 47);
+    font-size: 17px;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+}
+.nav-lists a:hover {
+    color: rgb(48, 47, 47);
+    font-size: 18px;
+    font-weight: 800;
+    border-bottom: 2px solid rgb(48, 47, 47);
+}
+.navtag-bar {
+    display: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Side Navbar */
+.side-navbar{
+    display: none;
+}
+
+/* Ids */
+section {
+    width: 100%;
+    min-height: 100%;
+}
+
+/* Home */
+#Home {
+    background: url('../images/Home-bg.jpg') no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 55px;
+}
+#Home h1 {
+    letter-spacing: 1px;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+#Home h2 {
+    letter-spacing: 1px;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+#Home p {
+    font-size: 20px;
+    font-weight: 600;
+    background: black;
+    padding: 5px;
+    border-radius: 20px;
+    color: white;
+}
+
+/* About */
+#About {
+    background:	rgb(40, 40, 40);
+    padding-top: 55px;
+}
+#About h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 50px;
+    color: white;
+}
+#About .container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    padding: 50px;
+}
+#About .container p {
+    width: 50%;
+    margin: 10px;
+    text-align: justify;
+    font-size: 20px;
+    color: white;
+}
+#About .container img {
+    margin: 20px;
+    border-radius: 10px;
+}
+
+/* Products */
+#Product {
+    background: rgb(220, 220, 220);
+    padding-top: 55px;
+}
+#Product h1 {
+    font-size: 50px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: black;
+}
+#Product .container-index {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+.container-index #search-ID {
+    width: 30%;
+    padding: 8px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    color: black;
+    border-radius: 10px;
+    outline: none;
+    margin-bottom: 10px;
+    border: 5px solid black;
+}
+#search-ID::placeholder {
+    font-weight: 900;
+}
+#search-ID:focus {
+    outline: none;
+}
+#Product .product-lists {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    padding: 50px;
+}
+#Product .product-list-img {
+    background: rgb(220, 220, 220);
+    border: none;
+    box-shadow: 15px 10px 20px rgba(0,0,0,0.3),
+                inset 2px 2px 5px white;
+    border-radius: 20px;
+    text-align: center;
+    width: 300px;
+    overflow: hidden;
+}
+.product-list-img img{
+    object-fit: cover;
+    transition: 0.3s;
+    aspect-ratio: 1/1;
+    padding: 20px;
+    border-radius: 30px;
+}
+#Product .product-list-img img:hover {
+   transform: scale(1.1);
+}
+.product-list-img i {
+    position: relative;
+    bottom: 61%;
+    left: 35%;
+    font-size: 20px;
+    background: rgb(220, 220, 220);
+    color: black;
+    border: 1px solid white;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.product-list-img h3 {
+    font-size: 30px;
+    padding-bottom: 5px;
+    text-align: center;
+    margin-top: -20px;
+    color: black;
+}
+.product-list-img p {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.product-list-img button {
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    width: 50%;
+    border: 2px solid black;
+    background: rgb(7, 187, 178);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 15px;
+}
+.product-list-img button:hover {
+    background: black;
+    color: white;
+}
+.product-list-img button:focus {
+    outline: none;
+}
+.product-list-img .heart-btn {
+    font-weight: 900;
+    color: red;
+}
+
+/* Contact */
+#Contact {
+    background: rgb(67, 109, 67);
+    padding-top: 50px;
+}
+#Contact h1 {
+    text-align: center;
+    font-size: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+}
+#Contact .container-cont {
+    width: 100%;
+    margin: 0 auto;
+}
+.container-cont input::placeholder{
+    font-weight: 700;
+}
+.container-cont form {
+    min-width: 60%;
+    margin-left: 35%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+form label {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: white;
+}
+form input {
+    padding: 8px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border: 5px solid rgb(7, 187, 178);
+}
+form input::placeholder {
+    font-weight: 700;
+    font-size: 18px;
+}
+.container-cont input:focus {
+    outline: none;
+}
+.submit-btn {
+    background: rgb(7, 187, 178);
+    color: white;
+    padding: 10px;
+    width: 20%;
+    border-radius: 10px;
+    text-align: center;
+    margin-left: 15%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+#footer-page {
+    background: rgb(251, 174, 32);
+    color: black;
+}
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.copyright-icon {
+    align-items: center;
+    font-size: 25px;
+    font-weight: 600;
+}
+.copy-icon {
+    font-size: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 3px;
+}
+
+
+/* Media Queries */
+@media screen and (max-width:700px) {
+    .navtag-bar {
+        display: block;
+    }
+    .nav-lists {
+        display: none;
+    }
+    .side-navbar {
+        background: rgb(48, 47, 47);
+        width: 40%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: -50%;
+        display: block;
+        padding: 10px;
+        transition: 1s;
+        z-index: 99;
+        text-transform: uppercase;
+    }
+    .close-nav {
+        text-align: right;
+        color: white;
+    }
+    .side-nav-lists p {
+        margin-top: 10px;
+        margin-bottom: 40px;
+    }
+    .side-nav-lists a {
+        color: white;
+        text-decoration: none;
+        font-size: 17px;
+        font-weight: 600;
+    }
+    .side-nav-lists a:hover {
+        color: white;
+        font-size: 18px;
+        text-decoration: underline;
+        font-weight: 800;
+    }
+    #Home {
+        background: url('../images/Home-bg.jpg') no-repeat center;
+        background-size: cover;
+        width: 100%;
+        height: 450px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    #Home h1 {
+        font-size: 35px;
+        margin-bottom: 10px;
+    }
+    #Home h2 {
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+    #Home p {
+        font-size: 20px;
+        font-weight: 600;
+        background: black;
+        padding: 5px;
+        border-radius: 15px;
+        color: white;
+    }
+    #About h1 {
+        font-size: 30px;
+        padding-top: 20px;
+        margin-bottom: 10px;
+    }
+    #About .container {
+        display: flex;
+        flex-direction: column;
+    }
+    #About .container p {
+        font-size: 17px;
+        width: 80%;
+        text-align: justify;
+        margin: 0 auto;
+        color: white;
+    }
+    #About .container img {
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        border-radius: 10px;
+    }
+    #Product h1 {
+        font-size: 30px;
+    }
+    .container-index #search-ID {
+        width: 50%;
+    }
+    #Contact h1 {
+        font-size: 30px;
+    }
+    .container-cont form {
+        width: 60%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+    form input {
+        width: 100%;
+    }
+    .submit-btn {
+        width: 50%;
+        margin-left: 60px;
+        margin-bottom: 30px;
+    }
+    .copyright-icon {
+        font-size: 20px;
+    }
+}
